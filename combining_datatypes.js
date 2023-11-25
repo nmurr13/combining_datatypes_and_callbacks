@@ -28,3 +28,45 @@ const apartmentBuilding = names=[
     ["Bob", "Mary", "Ted"]
 ];
 console.log(names[0][2])
+
+// Combine objects, arrays, and functions more than one level deep
+
+// Create a function knit that returns an object that has the following 
+// kinds of properties item: scarf, size : 6ft etc.
+//  Log a value of that object (hint: call the function and then call a property on the return value).
+
+const knit = ()=>{
+    return {
+        scarf: {
+            item:'scarf',
+            size: '6ft'
+        }
+    }
+}
+;
+
+console.log(knit().scarf.size);
+
+// Create a function crayonSelector that returns an object that has an array
+//  (you can reuse your crayonBox object). Log one of the elements of that array.
+    
+const crayonSelector = ()=>{
+    return {
+        crayonBox: {colors: ["blue", "green", "red", "orange"]}
+
+};
+}
+
+console.log(crayonSelector().crayonBox.colors[3]);
+
+
+// Create a function powerButton that returns a function called options 
+// - options should console.log a simple message like select a song.
+//  Call that inner function
+function powerButton(){
+    return function options()
+    {
+        console.log("select a song")
+    }
+}
+powerButton()();
